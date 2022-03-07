@@ -13,7 +13,7 @@ const cancelBtn = document.querySelector(".addTransactionPanel__panelButtons-can
 const deleteTransactionsAll = document.querySelector(".options__controls-deleteAll");
 
 const changeColor = document.querySelector(".brush");
-
+const showColorPanel = document.querySelector(".options__styleSelection");
 const closeStylePanel = document.querySelector(".options__styleSelection-cancel");
 const changeToLigh = document.querySelector(".options__styleSelection-colorButtons-light");
 const changeToDark = document.querySelector(".options__styleSelection-colorButtons-dark");
@@ -29,5 +29,11 @@ const showPanel = () => (addTransactionPanel.style.display = "flex");
 
 const hidePanel = () => (addTransactionPanel.style.display = "none");
 
+const showChangeColor = () => (showColorPanel.style.visibility = "visible");
+
+const hideChangeColor = () => (showColorPanel.style.visibility = "hidden");
+
+changeColor.addEventListener("click", showChangeColor);
+closeStylePanel.addEventListener("click", hideChangeColor);
 addTransactionBtn.addEventListener("click", showPanel);
 cancelBtn.addEventListener("click", hidePanel);
