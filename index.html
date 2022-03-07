@@ -42,14 +42,14 @@
               </p>
             </div>
             <div class="expensesArea__transaction" id="2">
-              <p class="expensesArea__transaction-transactionName"><i class="fas fa-cart-arrow-down"></i> Food</p>
+              <p class="expensesArea__transaction-transactionName"><i class="fas fa-hamburger"></i> Food</p>
               <p class="expensesArea__transaction-transactionAmount">
                 -100 zł
                 <button class="expensesArea__transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
               </p>
             </div>
             <div class="expensesArea__transaction" id="3">
-              <p class="expensesArea__transaction-transactionName"><i class="fas fa-cart-arrow-down"></i> Shopping</p>
+              <p class="expensesArea__transaction-transactionName"><i class="fas fa-film"></i> Cinema</p>
               <p class="expensesArea__transaction-transactionAmount">
                 -50 zł
                 <button class="expensesArea__transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
@@ -59,24 +59,29 @@
         </div>
       </section>
     </main>
+
     <div class="wrapper">
       <section class="options">
         <div class="options__head">
+          <div class="option__head-changeColor">
+            <button class="brush"><i class="fas fa-paint-brush"></i></i></button>
+          </div>
           <h2 class="title">Available funds:</h2>
           <p class="options__head-text">0 zł</p>
         </div>
 
         <div class="options__controls">
           <button class="options__controls-addTransaction"><i class="fas fa-plus"></i> Add transactions</button>
-          <button class="options__controls-deleteAll"><i class="fas fa-plus"></i> Delete transactions</button>
+          <button class="options__controls-deleteAll"> - Delete transactions</button>
         </div>
 
         <div class="options__styleSelection">
+          <button class="options__styleSelection-cancel"><i class="fas fa-window-close"></i></button>
           <h2 class="title">Choose a style:</h2>
 
           <div class="options__styleSelection-colorButtons">
-            <button class="buttons options__styleSelection-colorButtons-light"></button>
-            <button class="buttons options__styleSelection-colorButtons-dark"></button>
+            <button class="options__styleSelection-colorButtons-light"></button>
+            <button class="options__styleSelection-colorButtons-dark"></button>
           </div>
         </div>
       </section>
@@ -102,8 +107,8 @@
       </select>
 
       <div class="addTransactionPanel__panelButtons">
-        <button class="buttons addTransactionPanel__panelButtons-save"><i class="fas fa-save"></i> Save</buttons>
-        <button class="buttons addTransactionPanel__panelButtons-cancel"><i class="fas fa-window-close"></i> Cancel</buttons>
+        <button class="buttons addTransactionPanel__panelButtons-save"><i class="fas fa-save"></i> Save</button>
+        <button class="buttons addTransactionPanel__panelButtons-cancel"><i class="fas fa-window-close"></i> Cancel</button>
       </div>
     </div>
     <script src="js/script.js"></script>
