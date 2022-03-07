@@ -6,6 +6,7 @@
   --white-color: #fff;
   --incom-area-color: rgb(19, 200, 108);
   --expenses-area-color: rgb(255, 104, 104);
+  --style-button-color: #79797c;
 }
 
 * {
@@ -165,9 +166,9 @@ main .transatcions .transactionList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .incomeArea__transaction-transactionAmount-delete,
@@ -177,7 +178,7 @@ main .transatcions .transactionList {
   border: none;
   padding: 0.5em;
   font-size: 0.9rem;
-  color: var(--second-color);
+  color: var(--first-color);
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.7s;
   transition: -webkit-transform 0.7s;
@@ -192,7 +193,9 @@ main .transatcions .transactionList {
 }
 
 .options {
+  position: relative;
   padding: 3em 3em;
+  margin: 1em;
   border: 1px solid var(--border-color);
   width: 80%;
   display: -webkit-box;
@@ -208,6 +211,34 @@ main .transatcions .transactionList {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.options__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.options__head .brush {
+  padding: 0.5em;
+  background: none;
+  border: none;
+  color: var(--white-color);
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.options__head .brush:hover {
+  color: var(--border-color);
 }
 
 .options__head-text {
@@ -251,6 +282,8 @@ main .transatcions .transactionList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  visibility: hidden;
+  position: absolute;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -258,6 +291,36 @@ main .transatcions .transactionList {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+}
+
+.options__styleSelection-cancel {
+  position: absolute;
+  border: none;
+  top: 0;
+  right: 0;
+  padding: 2em;
+  background: none;
+}
+
+.options__styleSelection-cancel .fas {
+  color: var(--style-button-color);
+  font-size: 3.4rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.options__styleSelection-cancel .fas:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .options__styleSelection-colorButtons {
@@ -285,6 +348,7 @@ main .transatcions .transactionList {
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
+  cursor: pointer;
 }
 
 .options__styleSelection-colorButtons-light:hover, .options__styleSelection-colorButtons-dark:hover {

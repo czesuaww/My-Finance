@@ -125,7 +125,8 @@ main {
 
     &-transactionAmount {
       display: flex;
-      justify-content: center;
+      align-items: center;
+      // justify-content: center;
 
       &-delete {
         margin-left: 0.5em;
@@ -133,7 +134,7 @@ main {
         border: none;
         padding: 0.5em;
         font-size: 0.9rem;
-        color: var(--second-color);
+        color: var(--first-color);
         cursor: pointer;
         transition: transform 0.7s;
 
@@ -146,7 +147,9 @@ main {
 }
 
 .options {
+  position: relative;
   padding: 3em 3em;
+  margin: 1em;
   border: 1px solid var(--border-color);
   width: 80%;
   display: flex;
@@ -154,10 +157,30 @@ main {
   align-items: center;
   flex-direction: column;
 
-  &__head-text {
-    margin-top: -0.1em;
-    text-align: center;
-    font-size: 3rem;
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .brush {
+      padding: 0.5em;
+      background: none;
+      border: none;
+      color: var(--white-color);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.4s;
+
+      &:hover {
+        color: var(--border-color);
+      }
+    }
+
+    &-text {
+      margin-top: -0.1em;
+      text-align: center;
+      font-size: 3rem;
+    }
   }
 
   &__controls {
@@ -190,8 +213,34 @@ main {
 
   &__styleSelection {
     display: flex;
+    visibility: hidden;
+    position: absolute;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    width: 100%;
+    height: 100%;
+
+    &-cancel {
+      position: absolute;
+      border: none;
+      top: 0;
+      right: 0;
+      padding: 2em;
+      background: none;
+
+      .fas {
+        color: var(--style-button-color);
+        font-size: 3.4rem;
+        cursor: pointer;
+        transition: transform 0.7s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
 
     &-colorButtons {
       display: flex;
@@ -212,6 +261,7 @@ main {
         height: 50px;
         border-radius: 50%;
         transition: transform 0.4s;
+        cursor: pointer;
 
         &:hover {
           transform: scale(0.9);
