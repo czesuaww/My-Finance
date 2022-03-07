@@ -357,9 +357,6 @@ main .transatcions .transactionList {
 }
 
 .addTransactionPanel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
