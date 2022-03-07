@@ -12,78 +12,77 @@
     <script src="https://kit.fontawesome.com/ce1ab2aef5.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header class="walletHead">
-      <h1 class="walletHead__header"><i class="fas fa-wallet"></i>My Finance</h1>
-      <p class="walletHead__text">Check your finance</p>
+    <header class="walletHeader">
+      <h1 class="walletHeader__header"><i class="fas fa-wallet"></i>My Finance</h1>
+      <p class="walletHeader__text">Check your finance</p>
     </header>
 
     <main>
       <section class="transatcions">
-        <h2 class="transatcions__title">List of transactions:</h2>
-
-        <div class="transatcions__transactionList">
-          <div class="transatcions__transactionList-incomeArea">
-            <h3 class="transatcions__transactionList-incomeArea-heading">Income</h3>
-            <div class="transatcions__transactionList-incomeArea-transaction" id="0">
-              <p class="transatcions__transactionList-incomeArea-transaction-transactionName"><i class="fas fa-money-bill-wave"></i>Payment</p>
-              <p class="transatcions__transactionList-incomeArea-transaction-transactionAmount">
+        <h2 class="title">List of transactions:</h2>
+        <div class="transactionList">
+          <div class="incomeArea">
+            <h3 class="incomeArea__income-heading income-heading">Income</h3>
+            <div class="incomeArea__transaction" id="0">
+              <p class="incomeArea__transaction-transactionName"><i class="fas fa-money-bill-wave"></i>Payment</p>
+              <p class="incomeArea__transaction-transactionAmount">
                 2000 zł
-                <button class="transatcions__transactionList-incomeArea-transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
+                <button class="incomeArea__transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
               </p>
             </div>
           </div>
 
-          <div class="transatcions__transactionList-expensesArea">
-            <h3 class="transatcions__transactionList-expenses-area-heading">Expenses:</h3>
-            <div class="transatcions__transactionList-expensesArea-transaction" id="1">
-              <p class="transatcions__transactionList-expensesArea-transaction-transactionName"><i class="fas fa-cart-arrow-down"></i> Shopping</p>
-              <p class="transatcions__transactionList-expensesArea-transaction-transactionAmount">
+          <div class="expensesArea">
+            <h3 class="expensesArea__income-heading income-heading">Expenses:</h3>
+            <div class="expensesArea__transaction" id="1">
+              <p class="expensesArea__transaction-transactionName"><i class="fas fa-cart-arrow-down"></i> Shopping</p>
+              <p class="expensesArea__transaction-transactionAmount">
                 -400 zł
-                <button class="transatcions__transactionList-expensesArea-transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
+                <button class="expensesArea__transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
               </p>
             </div>
-            <div class="transatcions__transactionList-expensesArea-transaction" id="2">
-              <p class="transatcions__transactionList-expensesArea-transaction-transactionName"><i class="fas fa-hamburger"></i> Food</p>
-              <p class="transatcions__transactionList-expensesArea-transaction-transactionAmount">
+            <div class="expensesArea__transaction" id="2">
+              <p class="expensesArea__transaction-transactionName"><i class="fas fa-cart-arrow-down"></i> Food</p>
+              <p class="expensesArea__transaction-transactionAmount">
                 -100 zł
-                <button class="transatcions__transactionList-expensesArea-transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
+                <button class="expensesArea__transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
               </p>
             </div>
-            <div class="transatcions__transactionList-expensesArea-transaction" id="3">
-              <p class="transatcions__transactionList-expensesArea-transaction-transactionName"><i class="fas fa-film"></i> Cinema</p>
-              <p class="transatcions__transactionList-expensesArea-transaction-transactionAmount">
+            <div class="expensesArea__transaction" id="3">
+              <p class="expensesArea__transaction-transactionName"><i class="fas fa-cart-arrow-down"></i> Shopping</p>
+              <p class="expensesArea__transaction-transactionAmount">
                 -50 zł
-                <button class="transatcions__transactionList-expensesArea-transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
+                <button class="expensesArea__transaction-transactionAmount-delete"><i class="fas fa-times"></i></button>
               </p>
             </div>
           </div>
         </div>
       </section>
-
+    </main>
+    <div class="wrapper">
       <section class="options">
         <div class="options__head">
-          <h2 class="options__head-heading">Available funds:</h2>
+          <h2 class="title">Available funds:</h2>
           <p class="options__head-text">0 zł</p>
         </div>
 
         <div class="options__controls">
           <button class="options__controls-addTransaction"><i class="fas fa-plus"></i> Add transactions</button>
-          <button class="options__controls-deleteAll"><i cl0ass="far fa-trash-all"></i> Delete all</button>
+          <button class="options__controls-deleteAll"><i class="fas fa-plus"></i> Delete transactions</button>
         </div>
 
         <div class="options__styleSelection">
-          <h2 class="options__styleSelection-title">Choose a style:</h2>
+          <h2 class="title">Choose a style:</h2>
 
           <div class="options__styleSelection-colorButtons">
-            <button class="options__styleSelection-colorButtons-light"></button>
-            <button class="options__styleSelection-colorButtons-dark"></button>
+            <button class="buttons options__styleSelection-colorButtons-light"></button>
+            <button class="buttons options__styleSelection-colorButtons-dark"></button>
           </div>
         </div>
       </section>
-    </main>
-
+    </div>
     <div class="addTransactionPanel">
-      <h2 class="addTransactionPanel__title">Add a new transaction</h2>
+      <h2 class="title">Add a new transaction</h2>
       <label for="name">Name:</label>
       <small>(enter the name of the transaction)</small>
       <input type="text" id="name" />
@@ -103,8 +102,8 @@
       </select>
 
       <div class="addTransactionPanel__panelButtons">
-        <buttons class="addTransactionPanel__panelButtons-save"><i class="fas fa-save"></i> Save</buttons>
-        <buttons class="addTransactionPanel__panelButtons-cancel"><i class="fas fa-window-close"></i> Cancel</buttons>
+        <button class="buttons addTransactionPanel__panelButtons-save"><i class="fas fa-save"></i> Save</buttons>
+        <button class="buttons addTransactionPanel__panelButtons-cancel"><i class="fas fa-window-close"></i> Cancel</buttons>
       </div>
     </div>
     <script src="js/script.js"></script>
