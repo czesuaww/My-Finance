@@ -98,7 +98,7 @@
 
       <label for="category">Please select a category:</label>
       <small>( [ + ] means income, [ - ] means an expense)</small>
-      <select id="category">
+      <select id="category" onchange="selectCategory()">
         <option value="none" selected disabled></option>
         <option value="income">[ + ] Income</option>
         <option value="shopping">[ - ] Shopping</option>
