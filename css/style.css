@@ -7,6 +7,33 @@
   --incom-area-color: rgb(19, 200, 108);
   --expenses-area-color: rgb(255, 104, 104);
   --style-button-color: #79797c;
+  --hover-color-button: #24293f;
+}
+
+.title {
+  margin-bottom: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.income-heading {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  padding-top: 3em;
 }
 
 * {
@@ -30,19 +57,6 @@ body {
   overflow-x: hidden;
 }
 
-.title {
-  margin-bottom: 1.2em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 200;
-}
-
-.income-heading {
-  margin-bottom: 1.5em;
-  text-align: center;
-}
-
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,19 +77,6 @@ main .transatcions .transactionList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 400px;
-  padding-top: 3em;
 }
 
 .incomeArea,
@@ -123,18 +124,20 @@ main .transatcions .transactionList {
   font-size: 1.2rem;
 }
 
-.incomeArea__income-heading, .incomeArea__transaction-transactionAmount {
+.incomeArea__income-heading,
+.incomeArea .transactionAmount {
   color: var(--incom-area-color);
   font-weight: bold;
 }
 
-.expensesArea__income-heading, .expensesArea__transaction-transactionAmount {
+.expensesArea__income-heading,
+.expensesArea .transactionAmount {
   color: var(--expenses-area-color);
   font-weight: bold;
 }
 
-.incomeArea__transaction,
-.expensesArea__transaction {
+.incomeArea .transaction,
+.expensesArea .transaction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,24 +148,24 @@ main .transatcions .transactionList {
   border-bottom: 1px solid var(--border-color);
 }
 
-.incomeArea__transaction:last-child,
-.expensesArea__transaction:last-child {
+.incomeArea .transaction:last-child,
+.expensesArea .transaction:last-child {
   border-bottom: none;
 }
 
-.incomeArea__transaction-transactionName,
-.expensesArea__transaction-transactionName {
+.incomeArea .transaction .transactionName,
+.expensesArea .transaction .transactionName {
   font-size: 1.1rem;
   margin-right: 1em;
 }
 
-.incomeArea__transaction-transactionName i,
-.expensesArea__transaction-transactionName i {
+.incomeArea .transaction .transactionName i,
+.expensesArea .transaction .transactionName i {
   margin-right: 0.5em;
 }
 
-.incomeArea__transaction-transactionAmount,
-.expensesArea__transaction-transactionAmount {
+.incomeArea .transaction .transactionAmount,
+.expensesArea .transaction .transactionAmount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,8 +174,8 @@ main .transatcions .transactionList {
           align-items: center;
 }
 
-.incomeArea__transaction-transactionAmount-delete,
-.expensesArea__transaction-transactionAmount-delete {
+.incomeArea .transaction .transactionAmount .delete,
+.expensesArea .transaction .transactionAmount .delete {
   margin-left: 0.5em;
   background: none;
   border: none;
@@ -186,8 +189,8 @@ main .transatcions .transactionList {
   transition: transform 0.7s, -webkit-transform 0.7s;
 }
 
-.incomeArea__transaction-transactionAmount-delete:hover,
-.expensesArea__transaction-transactionAmount-delete:hover {
+.incomeArea .transaction .transactionAmount .delete:hover,
+.expensesArea .transaction .transactionAmount .delete:hover {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -274,8 +277,7 @@ main .transatcions .transactionList {
 }
 
 .options__controls-addTransaction:hover, .options__controls-deleteAll:hover {
-  color: var(--first-color);
-  background-color: var(--second-color);
+  background-color: var(--hover-color-button);
 }
 
 .options__styleSelection {
@@ -399,7 +401,7 @@ main .transatcions .transactionList {
 }
 
 .addTransactionPanel__panelButtons .buttons:hover {
-  background-color: #191b33;
+  background-color: var(--second-color);
 }
 
 .addTransactionPanel label {
@@ -432,5 +434,12 @@ main .transatcions .transactionList {
 .addTransactionPanel select,
 .addTransactionPanel option {
   font-size: 1.1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .addTransactionPanel input,
+  .addTransactionPanel select {
+    width: 680px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

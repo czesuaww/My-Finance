@@ -1,4 +1,5 @@
 @import "./colors";
+@import "./components";
 
 * {
   box-sizing: border-box;
@@ -20,19 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-.title {
-  margin-bottom: 1.2em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 200;
-}
-
-.income-heading {
-  margin-bottom: 1.5em;
-  text-align: center;
-}
-
 main {
   display: flex;
   justify-content: center;
@@ -44,15 +32,6 @@ main {
       display: flex;
     }
   }
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 400px;
-  padding-top: 3em;
 }
 
 .incomeArea,
@@ -88,7 +67,7 @@ main {
 
 .incomeArea {
   &__income-heading,
-  &__transaction-transactionAmount {
+  .transactionAmount {
     color: var(--incom-area-color);
     font-weight: bold;
   }
@@ -96,7 +75,7 @@ main {
 
 .expensesArea {
   &__income-heading,
-  &__transaction-transactionAmount {
+  .transactionAmount {
     color: var(--expenses-area-color);
     font-weight: bold;
   }
@@ -104,7 +83,7 @@ main {
 
 .incomeArea,
 .expensesArea {
-  &__transaction {
+  .transaction {
     display: flex;
     padding: 0.5em 0;
     justify-content: space-between;
@@ -115,7 +94,7 @@ main {
       border-bottom: none;
     }
 
-    &-transactionName {
+    .transactionName {
       font-size: 1.1rem;
       margin-right: 1em;
       i {
@@ -123,12 +102,12 @@ main {
       }
     }
 
-    &-transactionAmount {
+    .transactionAmount {
       display: flex;
       align-items: center;
       // justify-content: center;
 
-      &-delete {
+      .delete {
         margin-left: 0.5em;
         background: none;
         border: none;
@@ -205,8 +184,7 @@ main {
       transition: color 0.3s, background-color 0.3s;
 
       &:hover {
-        color: var(--first-color);
-        background-color: var(--second-color);
+        background-color: var(--hover-color-button);
       }
     }
   }
@@ -299,7 +277,7 @@ main {
       transition: background-color 0.4s;
 
       &:hover {
-        background-color: rgb(25, 27, 51);
+        background-color: var(--second-color);
       }
     }
   }
@@ -334,3 +312,5 @@ main {
     font-size: 1.1rem;
   }
 }
+
+@import "./medium";
