@@ -61,7 +61,9 @@ const createNewTransaction = () => {
   <p class="transactionName">${categoryIcon} ${nameInput.value}</p>
   <p class="transactionAmount">
   ${amountImput.value} zł
-  <button class="delete" onclick="deleteTransaction(${ID})"><i class="fas fa-times"></i></button>
+  <button class="delete" onclick="deleteTransaction(${ID})">
+    <i class="fas fa-times"></i>
+  </button>
   </p>`;
 
   if (amountImput.value > 0) {
@@ -71,6 +73,7 @@ const createNewTransaction = () => {
   }
 
   moneyArray.push(parseFloat(amountImput.value));
+  countMoney(moneyArray);
 
   hidePanel();
   ID++;
@@ -96,6 +99,10 @@ const checkCategory = transaction => {
   }
 };
 
+const countMoney = money => {
+  const newMoney = money.reduce((a, b) => a + b);
+  availableMoney.textContent = `${newMoney} zł`;
+};
 // createNewTransaction();
 changeColor.addEventListener("click", showChangeColor);
 closeStylePanel.addEventListener("click", hideChangeColor);
