@@ -32,8 +32,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 0 auto;
   width: 100%;
   max-width: 400px;
@@ -42,7 +42,7 @@
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -66,11 +66,11 @@ main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 main .transatcions {
@@ -96,15 +96,15 @@ main .transatcions .transactionList {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 1em;
   height: 220px;
 }
@@ -114,8 +114,8 @@ main .transatcions .transactionList {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .walletHeader__header {
@@ -147,8 +147,8 @@ main .transatcions .transactionList {
   display: flex;
   padding: 0.5em 0;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -174,8 +174,8 @@ main .transatcions .transactionList {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .incomeArea .transaction .transactionAmount .delete,
@@ -196,7 +196,7 @@ main .transatcions .transactionList {
 .incomeArea .transaction .transactionAmount .delete:hover,
 .expensesArea .transaction .transactionAmount .delete:hover {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .options {
@@ -209,15 +209,15 @@ main .transatcions .transactionList {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .options__head {
@@ -226,11 +226,11 @@ main .transatcions .transactionList {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .options__head .brush {
@@ -259,7 +259,7 @@ main .transatcions .transactionList {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin: 0.5em 0;
 }
 
@@ -267,7 +267,8 @@ main .transatcions .transactionList {
   margin-right: 0.4px;
 }
 
-.options__controls-addTransaction, .options__controls-deleteAll {
+.options__controls-addTransaction,
+.options__controls-deleteAll {
   width: 100%;
   padding: 0.4em 0.7em;
   margin: 1em;
@@ -280,7 +281,8 @@ main .transatcions .transactionList {
   transition: color 0.3s, background-color 0.3s;
 }
 
-.options__controls-addTransaction:hover, .options__controls-deleteAll:hover {
+.options__controls-addTransaction:hover,
+.options__controls-deleteAll:hover {
   background-color: var(--hover-color-button);
 }
 
@@ -292,14 +294,14 @@ main .transatcions .transactionList {
   position: absolute;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   height: 100%;
@@ -326,7 +328,7 @@ main .transatcions .transactionList {
 
 .options__styleSelection-cancel .fas:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .options__styleSelection-colorButtons {
@@ -345,7 +347,8 @@ main .transatcions .transactionList {
   border: 1px solid var(--light-mode-color);
 }
 
-.options__styleSelection-colorButtons-light, .options__styleSelection-colorButtons-dark {
+.options__styleSelection-colorButtons-light,
+.options__styleSelection-colorButtons-dark {
   margin: 0 30px;
   width: 50px;
   height: 50px;
@@ -357,23 +360,24 @@ main .transatcions .transactionList {
   cursor: pointer;
 }
 
-.options__styleSelection-colorButtons-light:hover, .options__styleSelection-colorButtons-dark:hover {
+.options__styleSelection-colorButtons-light:hover,
+.options__styleSelection-colorButtons-dark:hover {
   -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .addTransactionPanel {
   display: none;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
@@ -388,8 +392,8 @@ main .transatcions .transactionList {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 30px;
 }
 
