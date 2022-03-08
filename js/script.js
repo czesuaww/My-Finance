@@ -122,8 +122,16 @@ const deleteTransaction = id => {
   countMoney(moneyArray);
 };
 
+const deleteAllTransaction = () => {
+  incomeSection.innerHTML = '<h3 class="incomeArea__income-heading income-heading">Income</h3>';
+  expensesSection.innerHTML = '<h3 class="expensesArea__income-heading income-heading">Expenses:</h3>';
+  availableMoney.text = "0 zł";
+  moneyArray = [0];
+};
+
 changeColor.addEventListener("click", showChangeColor);
 closeStylePanel.addEventListener("click", hideChangeColor);
 addTransactionBtn.addEventListener("click", showPanel);
 cancelBtn.addEventListener("click", hidePanel);
 saveBtn.addEventListener("click", checkForms);
+deleteTransactionsAll.addEventListener("click", deleteAllTransaction);
