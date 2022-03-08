@@ -123,10 +123,26 @@ const deleteTransaction = id => {
 };
 
 const deleteAllTransaction = () => {
-  incomeSection.innerHTML = '<h3 class="incomeArea__income-heading income-heading">Income</h3>';
+  incomeSection.innerHTML = '<h3 class="incomeArea__income-heading income-heading">Income:</h3>';
   expensesSection.innerHTML = '<h3 class="expensesArea__income-heading income-heading">Expenses:</h3>';
   availableMoney.text = "0 zł";
   moneyArray = [0];
+};
+
+const changeStyleToLight = () => {
+  root.style.setProperty("--first-color", "#14161f");
+  root.style.setProperty("--second-color", "#f9f9f9");
+  root.style.setProperty("--border-color", "rgba(0, 0, 0, .2)");
+  root.style.setProperty("--brush-color", "#000");
+  root.style.setProperty("--brush-color-hover", "rgb(148, 142, 142)");
+};
+
+const changeStyleToDark = () => {
+  root.style.setProperty("--first-color", "#f9f9f9");
+  root.style.setProperty("--second-color", "#14161f");
+  root.style.setProperty("--border-color", "rgba(241, 236, 236, 0.2)");
+  root.style.setProperty("--brush-color", "#ddd");
+  root.style.setProperty("--brush-color-hover", "rgb(122, 117, 117)");
 };
 
 changeColor.addEventListener("click", showChangeColor);
@@ -135,3 +151,7 @@ addTransactionBtn.addEventListener("click", showPanel);
 cancelBtn.addEventListener("click", hidePanel);
 saveBtn.addEventListener("click", checkForms);
 deleteTransactionsAll.addEventListener("click", deleteAllTransaction);
+deleteTransactionsAll.addEventListener("click", deleteAllTransaction);
+deleteTransactionsAll.addEventListener("click", deleteAllTransaction);
+changeToLigh.addEventListener("click", changeStyleToLight);
+changeToDark.addEventListener("click", changeStyleToDark);
