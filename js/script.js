@@ -36,20 +36,67 @@ const showChangeColor = () => (showColorPanel.style.visibility = "visible");
 
 const hideChangeColor = () => (showColorPanel.style.visibility = "hidden");
 
-const clearInputs = () => {
-  nameInput.value = "";
-  amountImput.value = "";
-  categorySelect.value = "none";
-};
 const checkForms = () => {
-  selectedCategory = categorySelect.options[categorySelect.selectedIndex].value;
-  if (nameInput.value !== "" && amountImput.value !== "" && selectedCategory !== "none") {
-    console.log("ok");
+  // selectedCategory = categorySelect.options[categorySelect.selectedIndex].value;
+  if (nameInput.value !== "" && amountImput.value !== "" && categorySelect.value !== "none") {
+    createNewTransaction();
   } else {
     alert("Uzupełnij wszystkie pola!");
   }
 };
 
+const clearInputs = () => {
+  nameInput.value = "";
+  amountImput.value = "";
+  categorySelect.value = "none";
+};
+
+const createNewTransaction = () => {
+  const newTransaction = document.createElement("div");
+  newTransaction.classList.add("transaction");
+  newTransaction.setAttribute("id", ID);
+  checkCategory(selectedCategory);
+
+  newTransaction.innerHTML = `
+  <p class="transactionName">${categoryIcon} ${nameInput.value}</p>
+  <p class="transactionAmount">
+  ${amountImput.value} zł
+  <button class="delete" onclick="deleteTransaction(${ID})"><i class="fas fa-times"></i></button>
+  </p>`;
+
+  if (amountImput.value > 0) {
+    incomeSection.appendChild(newTransaction);
+  } else {
+    expensesSection.appendChild(newTransaction);
+  }
+
+  moneyArray.push(parseFloat(amountImput.value));
+
+  hidePanel();
+  ID++;
+  clearInputs();
+};
+
+const selectCategory = () => (selectedCategory = categorySelect.options[categorySelect.selectedIndex].text);
+
+const checkCategory = transaction => {
+  switch (transaction) {
+    case "[ + ] Income":
+      categoryIcon = '<i class="fas fa-money-bill-wave"></i>';
+      break;
+    case "[ - ] Shopping":
+      categoryIcon = '<i class="fas fa-cart-arrow-down"></i>';
+      break;
+    case "[ - ] Food":
+      categoryIcon = '<i class="fas fa-hamburger"></i>';
+      break;
+    case "[ - ] Cinema":
+      categoryIcon = '<i class="fas fa-film"></i>';
+      break;
+  }
+};
+
+// createNewTransaction();
 changeColor.addEventListener("click", showChangeColor);
 closeStylePanel.addEventListener("click", hideChangeColor);
 addTransactionBtn.addEventListener("click", showPanel);
