@@ -145,13 +145,13 @@ main {
       padding: 0.5em;
       background: none;
       border: none;
-      color: var(--white-color);
+      color: var(--brush-color);
       font-size: 1rem;
       cursor: pointer;
       transition: color 0.4s;
 
       &:hover {
-        color: var(--border-color);
+        color: var(--brush-color-hover);
       }
     }
 
@@ -223,13 +223,13 @@ main {
     &-colorButtons {
       display: flex;
       &-light {
-        background: var(--first-color);
-        border: 1px solid var(--second-color);
+        background: var(--light-mode-color);
+        border: 1px solid var(--dark-mode-color);
       }
 
       &-dark {
-        background: var(--second-color);
-        border: 1px solid var(--first-color);
+        background: var(--dark-mode-color);
+        border: 1px solid var(--light-mode-color);
       }
 
       &-light,

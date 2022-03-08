@@ -2,12 +2,16 @@
   --first-color: #f9f9f9;
   --second-color: #14161f;
   --border-color: rgba(241, 236, 236, 0.2);
+  --brush-color-hover: rgb(122, 117, 117);
   --black-color: #000;
   --white-color: #fff;
+  --brush-color: #ddd;
   --incom-area-color: rgb(19, 200, 108);
   --expenses-area-color: rgb(255, 104, 104);
   --style-button-color: #79797c;
   --hover-color-button: #24293f;
+  --dark-mode-color: #14161f;
+  --light-mode-color: #f9f9f9;
 }
 
 .title {
@@ -233,7 +237,7 @@ main .transatcions .transactionList {
   padding: 0.5em;
   background: none;
   border: none;
-  color: var(--white-color);
+  color: var(--brush-color);
   font-size: 1rem;
   cursor: pointer;
   -webkit-transition: color 0.4s;
@@ -241,7 +245,7 @@ main .transatcions .transactionList {
 }
 
 .options__head .brush:hover {
-  color: var(--border-color);
+  color: var(--brush-color-hover);
 }
 
 .options__head-text {
@@ -332,13 +336,13 @@ main .transatcions .transactionList {
 }
 
 .options__styleSelection-colorButtons-light {
-  background: var(--first-color);
-  border: 1px solid var(--second-color);
+  background: var(--light-mode-color);
+  border: 1px solid var(--dark-mode-color);
 }
 
 .options__styleSelection-colorButtons-dark {
-  background: var(--second-color);
-  border: 1px solid var(--first-color);
+  background: var(--dark-mode-color);
+  border: 1px solid var(--light-mode-color);
 }
 
 .options__styleSelection-colorButtons-light, .options__styleSelection-colorButtons-dark {
