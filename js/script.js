@@ -68,8 +68,10 @@ const createNewTransaction = () => {
 
   if (amountImput.value > 0) {
     incomeSection.appendChild(newTransaction);
+    newTransaction.classList.add("income");
   } else {
     expensesSection.appendChild(newTransaction);
+    newTransaction.classList.add("expenses");
   }
 
   moneyArray.push(parseFloat(amountImput.value));
@@ -103,7 +105,23 @@ const countMoney = money => {
   const newMoney = money.reduce((a, b) => a + b);
   availableMoney.textContent = `${newMoney} zł`;
 };
-// createNewTransaction();
+
+const deleteTransaction = id => {
+  const transactionToDelete = document.getElementById(id);
+  const transactionAmount = parseFloat(transactionToDelete.childNodes[3].outerText);
+  const indexOfTransaction = moneyArray.indexOf(transactionAmount);
+
+  console.log(transactionAmount);
+  moneyArray.splice(indexOfTransaction, 1);
+
+  if (transactionToDelete.classList.contains("income")) {
+    incomeSection.removeChild(transactionToDelete);
+  } else {
+    expensesSection.removeChild(transactionToDelete);
+  }
+  countMoney(moneyArray);
+};
+
 changeColor.addEventListener("click", showChangeColor);
 closeStylePanel.addEventListener("click", hideChangeColor);
 addTransactionBtn.addEventListener("click", showPanel);
